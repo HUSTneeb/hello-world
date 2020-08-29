@@ -307,7 +307,7 @@ installV2Ray(){
 
     # Install V2Ray server config to /etc/v2ray
     if [ ! -f '/etc/v2ray/config.json' ]; then
-        local PORT="$(($RANDOM + 10000))"
+        local PORT="$((25288))"
         local UUID="$(cat '/proc/sys/kernel/random/uuid')"
 
         unzip -pq "$1" "$2vpoint_vmess_freedom.json" | \
